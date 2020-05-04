@@ -376,6 +376,12 @@ header .header__main .header__title .header__cards .header__card .bot {
   font-size: 50px;
   position: relative;
 }
+@media (max-width: 1342px) {
+  .how-it-works__title .hr {
+    position: absolute !important;
+    top: 50px !important;
+  }
+}
 .how-it-works__main {
   display: flex;
   flex-flow: row wrap;
@@ -429,4 +435,185 @@ header .header__main .header__title .header__cards .header__card .bot {
   line-height: 18px;
   opacity: 0.5;
   letter-spacing: -0.1625px;
+}
+.dishes {
+  max-width: 76%;
+  margin: 0 auto;
+}
+.dishes__title {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.dishes__title ._top {
+  font-size: 100px;
+  display: flex;
+  max-width: 26.03%;
+  min-width: 289px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.dishes__title ._top .h2 {
+  position: absolute;
+  z-index: 1;
+}
+.dishes__title ._top .h2 h2 {
+  font-size: calc(289px / 3);
+  color: #303030;
+}
+.dishes__title ._top .h3 {
+  min-width: 300px;
+  position: absolute;
+  z-index: 2;
+}
+.dishes__title ._top .h3 h3 {
+  color: #fff;
+  width: 100%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: capitalize;
+}
+.dishes__title ._top .hr {
+  max-width: 60px;
+  margin: 28px auto 55px auto;
+  min-width: 60px;
+  height: 2px;
+  position: static;
+  align-self: flex-end;
+}
+.dishes__title ._top .hr hr {
+  background: #34C759;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.dishes__title ._bot {
+  display: inline;
+  font-size: 50px;
+  position: relative;
+}
+@media (max-width: 1342px) {
+  .dishes__title .hr {
+    position: absolute !important;
+    top: 50px !important;
+  }
+}
+.dishes__main {
+  height: auto;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.dishes__main-card {
+  margin: 30px 0 0 0;
+  width: 350px;
+  height: 493px;
+  background: #202020;
+}
+.dishes__main-card .img-top {
+  height: 50%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.dishes__main-card .bot {
+  height: 50%;
+  width: 100%;
+}
+.dishes__main-card .bot .title {
+  padding: 0 6% 0 10.28%;
+  margin: 29px 0 20px 0;
+}
+.dishes__main-card .bot .title span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 30px;
+  color: #D9D9D9;
+}
+.dishes__main-card .bot .title .subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.15px;
+  color: #A4A8B2;
+}
+.dishes__main-card .bot .txt {
+  padding: 0 6% 0 10.28%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1625px;
+  color: #85878C;
+  margin: 0 0 26px 0;
+}
+.dishes__main-card .bot .grade {
+  display: flex;
+  width: 100%;
+  padding: 0 5.14% 0 10.28%;
+  flex-flow: row nowrap;
+}
+.dishes__main-card .bot .grade .stars {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  background-image: url(../img/stars.png);
+}
+.dishes__main-card .bot .grade .btn {
+  flex: 1;
+}
+.dishes__main-card .bot .grade .btn button {
+  background: #34C759;
+  width: 100px;
+  height: 40px;
+  float: right;
+  border: none;
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 25px;
+}
+.dishes__main-card:nth-child(1) .img-top {
+  background-image: url(../img/f1.png);
+}
+.dishes__main-card:nth-child(2) .img-top {
+  background-image: url(../img/f2.png);
+}
+.dishes__main-card:nth-child(3) .img-top {
+  background-image: url(../img/f3.png);
+}
+.dishes__main-card:nth-child(4) .img-top {
+  background-image: url(../img/f4.png);
+}
+.dishes__main-card:nth-child(5) .img-top {
+  background-image: url(../img/f5.png);
+}
+.dishes__main-card:nth-child(6) .img-top {
+  background-image: url(../img/f6.png);
+}
+.dishes__main-card:nth-child(7) .img-top {
+  background-image: url(../img/f7.png);
+}
+.dishes__main-card:nth-child(8) .img-top {
+  background-image: url(../img/f8.png);
 }
