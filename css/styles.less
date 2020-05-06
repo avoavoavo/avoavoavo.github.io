@@ -1,4 +1,4 @@
-//compress: false
+//compress: true
 @font-face {
     font-family: 'Helvetica Neue';
     src: local('Helvetica Neue Light'), local('Helvetica-Neue-Light'),
@@ -386,14 +386,16 @@ header {
 }
 
 .set-often-title() {
-    @media (max-width:500px){
-        .h3 h3{
+    @media (max-width:500px) {
+        .h3 h3 {
             font-size: 20px !important;
         }
-        .h2 h2{
+
+        .h2 h2 {
             font-size: 60px !important;
         }
     }
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -734,6 +736,7 @@ header {
 
 
 .chefs {
+    overflow: hidden;
     max-width: 77%;
     margin: 0 auto;
 
@@ -798,13 +801,258 @@ header {
                     }
                 }
             }
-            .bot{
+
+            .bot {
                 max-height: 50%;
                 width: 100%;
                 height: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+.recipes {
+    max-width: 77%;
+    margin: 0 auto;
+
+    &__title {
+        display: flex;
+        width: 100%;
+        height: 240px;
+        .set-often-title();
+
+        @media (max-width: 600px) {
+            & {
+                .h3 {
+                    width: 150% !important;
+                    max-width: 150% !important;
+                }
+            }
+        }
+
+        .h3 {
+            max-width: 200%;
+            width: 200%;
+
+            @media (max-width:500px) {
+                & {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    &__main {
+        width: 100%;
+        height: auto;
+        min-height: 510px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        .left {
+            background: url(../img/r1.png) no-repeat center / cover;
+            width: 48.64%;
+            height: 100%;
+            min-width: 400px;
+            max-width: 540px;
+
+            .content {
+                width: 100%;
+                position: relative;
+                height: 100%;
+                padding: 60px 16.66%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .arrow {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #252525;
+                    opacity: 0.65;
+                    border-radius: 50%;
+                }
+
+                .tag {
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    width: 90px;
+                    height: 30px;
+                    background: #000;
+                    font-weight: 900;
+                    font-size: 10px;
+                    line-height: 25px;
+                    text-align: center;
+                    letter-spacing: 1.25px;
+                    text-transform: uppercase;
+                    border-radius: 4px;
+                    color: #FFFFFF;
+                    opacity: 0.5;
+                }
+
+                .date {
+                    width: 13.98%;
+                    min-width: 74px;
+                    height: 30px;
+                    margin-top: 65px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: #FFFFFF;
+                }
+
+                .main {
+                    /*width: 76.1%;*/
+                    text-align: center;
+                    margin-top: 25px;
+                    font-weight: 500;
+                    font-size: 24px;
+                    text-align: center;
+                    color: #FFFFFF;
+                }
+
+                .name {
+                    margin-top: 45px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: #FFFFFF;
+                }
+
+                .feedback {
+                    min-width: 140px;
+                    margin-top: 60px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    img:first-of-type {
+                        max-width: 22px;
+                        max-height: 18px;
+                        min-width: 22px;
+                        min-height: 18px;
+                    }
+
+                    img:last-of-type {
+                        max-width: 20px;
+                        max-height: 18px;
+                        min-width: 20px;
+                        min-height: 18px;
+                    }
+
+                    span {
+                        font-weight: bold;
+                        font-size: 12px;
+                        line-height: 30px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+
+        .right {
+            height: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            &__card {
+                height: 150px;
+                border-radius: 3%;
+                width: 50%;
+                background: #202020;
+                color: #fff;
+                transition: all linear 0.5s;
+                padding: 30px 0 0 30px;
+
+                &:hover {
+                    background: #31c858;
+
+                    p,
+                    div,
+                    span {
+                        color: black !important;
+                    }
+                    .img{
+                        background-image: url(../img/eye_hover.png) !important;
+                    }
+                    .img{
+                        background: url(../img/mess_hover.png) no-repeat center / 100% !important;
+                    }
+                }
+
+                .bot {
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    &__left {
+                        button {
+                            width: 65px;
+                            height: 25px;
+                            background: #131313;
+                            border: none;
+                            color: white;
+                            border-radius: 5px;
+                            font-weight: 900;
+                            font-size: 10px;
+                            line-height: 25px;
+                            text-align: center;
+                            letter-spacing: 1.25px;
+                            text-transform: uppercase;
+                        }
+
+                        span {
+                            margin-left: 15px;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 25px;
+                            color: #B3B3B3;
+                        }
+                    }
+
+                    &__right {
+                        width: 61px + 24px + 54px;
+
+                        .img {
+                            display: inline-block;
+                            max-width: 22px;
+                            max-height: 18px;
+                            min-width: 22px;
+                            min-height: 18px;
+                            background: url(../img/eye.png) no-repeat center / 80%;
+                        }
+
+                        .img.s {
+                            display: inline-block;
+                            max-width: 20px;
+                            max-height: 18px;
+                            min-width: 20px;
+                            min-height: 18px;
+                            margin-left: 24px;
+                            background: url(../img/answ.svg) no-repeat center / 80%;
+                        }
+
+                        span {
+                            font-weight: bold;
+                            font-size: 12px;
+                            line-height: 30px;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
             }
         }
     }
