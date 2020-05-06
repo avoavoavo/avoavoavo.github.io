@@ -12,6 +12,7 @@
                 justify-content: space-around;
 
                 .right__card {
+                    margin-left: 40px !important;
                     width: 100% !important;
                 }
             }
@@ -27,6 +28,9 @@
     .recipes {
         .right {
             margin-top: 50px !important;
+            &__card{
+                margin-top: 40px;
+            }
         }
     }
 }
@@ -164,7 +168,17 @@
         }
     }
 }
-
+@media (max-width:537px) {
+    .recipes{
+        .right__card{
+            .bot{
+                &__right{
+                    margin-top: 30px !important;
+                }
+            }
+        }
+    }
+}
 header {
     background-attachment: fixed;
 }
